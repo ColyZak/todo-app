@@ -1,77 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Todo List 2023 with LocalStorage</title>
-	<!-- CSS Import -->
-	<link rel="stylesheet" href="main.css" />
-	<!-- End of CSS Import -->
-	<!-- Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-	<!-- End of Fonts -->
-</head>
-<body>
-	<!-- App Wrapper -->
-	<main class="app">
-		<!-- Greeting -->
-		<section class="greeting">
-			<h2 class="title">
-				What's up, <input type="text" id="name" placeholder="Name here" />
-			</h2>
-		</section>
-		<!-- End of Greeting -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionnaire de taches</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-content">
+        <h2>Gestionnaire de taches <span class="count"></span></h2>
+        <button id="addTaskModalButton">Ajouter tache</button>
+      </div>
+      <div class="modal" id="taskModal">
+        <div class="modal-content">
+          <span class="close">X</span>
+          <div class="form">
+            <form method="post">
+              <label for="title">Titre</label>
+              <input class="form-input" type="text" id="title" name="title" />
+
+              <label for="description">Description</label>
+              <input class="form-input" type="text" id="description" name="description" />
+
+              <label for="priority">Priorite</label>
+             <select class="form-input" name="priority" id="priority">
+				<option value="faible">Faible</option>
+				<option value="moyen">Moyen</option>
+				<option value="forte">Forte</option>
+			 </select>
+
+			 <label for="deadline">Deadline</label>
+			 <input class="form-input" type="number" name="deadline" id="deadline">
+
+              <button type="submit" class="addTaskButton">Ajouter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+	  <div class="tasks">
 		
-		<!-- New Todo -->
-		<section class="create-todo">
-			<h3>CREATE A TODO</h3>
-			<form id="new-todo-form">
-				<h4>What's on your todo?</h4>
-				<input 
-					type="text" 
-					placeholder="e.g. Get some milk"
-					name="content"
-					id="content" />
-				
-				<h4>Pick a priority</h4>
-				<div class="options">
-					<label>
-						<input type="radio" name="priority" id="low" value="low" /> 
-						<span class="bubble low"></span>
-						<div>Faible</div>
-					</label>
-					<label>
-						<input type="radio" name="priority" id="medium" value="medium" />
-						<span class="bubble medium"></span>
-						<div>Moyenne</div>
-					</label>
-					<label>
-						<input type="radio" name="priority" id="high" value="high" />
-						<span class="bubble high"></span>
-						<div>Forte</div>
-					</label>
-				</div>
-
-				<input type="submit" value="Add todo" />
-			</form>
-		</section>
-		<!-- End of New Todo -->
-
-		<!-- Todo List -->
-		<section class="todo-list">
-			<h3>TODO LIST</h3>
-			<div class="list" id="todo-list"></div>
-		</section>
-		<!-- End of Todo List -->
-
-	</main>
-	<!-- End of App Wrapper -->
-
-	<!-- JS Import -->
-	<script src="main.js"></script>
-	<!-- End of JS Import -->
-</body>
+			
+	
+	  </div>
+      
+    </div>
+  </body>
 </html>

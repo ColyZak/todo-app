@@ -1,0 +1,126 @@
+body{
+    background: rgba(204, 206, 207, 0.5)
+}
+
+.container {
+    width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .title-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .count {
+    color: #20d8ad;
+  }
+  #addTaskModalButton {
+    background-color: #20d8ad;
+    color: white;
+    padding: 10px 16px;
+    margin: 8px 0;
+    cursor: pointer;
+    border: 1px solid #20d8ad;
+    border-radius: 3px;
+  }
+ 
+  .delete-btn {
+    background-color: rgb(206, 12, 12);
+    color: white;
+    border: 1px solid rgb(206, 12, 12);
+    border-radius: 5px;
+    padding: 6px 13px;
+    cursor: pointer;
+    margin-left: 0.5%;
+  }
+  .update-btn {
+    background-color: #20d8ad;
+    color: white;
+    border: 1px solid #20d8ad;
+    border-radius: 5px;
+    padding: 6px 13px;
+    cursor: pointer;
+    margin-left: 0.5%;
+  }
+  .details-btn {
+    background-color: rgb(89, 163, 248);
+    color: white;
+    border: 1px solid rgb(89, 163, 248);
+    border-radius: 5px;
+    padding: 6px 13px;
+    cursor: pointer;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    background-color:  rgb(247, 246, 246);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(206, 205, 205);
+    width: 80%;
+  }
+  .close {
+    color: gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .addTaskButton {
+    background-color: #1c8d73;
+    border: 1px solid #1c8d73;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+  }
+  .task-card {
+    background: rgba(255, 255, 255, 0.979);
+    padding: 1%;
+    border-radius: 3%;
+    margin-top: 3%;
+  }
+ .hidden { 
+    display: none;
+ }
+ h1 {
+    font-size: 1.5em;
+ }
+ p {
+    margin: 3px;
+    font-size: 1.5em;
+    font-style: italic;
+ }
+
+ .overlined {
+  text-decoration: line-through;
+ }
